@@ -1,0 +1,140 @@
+
+1. Command to upload FND FILES
+NOTE: Please make sure to update the password. thanks!
+
+
+
+--data definition
+
+FNDLOAD apps/PASSWORD 0 Y UPLOAD $XDO_TOP/patch/115/import/xdotmpl.lct XXNBTY_EXT05_DD.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+
+--upload_menu 
+
+FNDLOAD apps/PASSWORD 0 Y UPLOAD $FND_TOP/patch/115/import/afsload.lct XXNBTY_MSC_SCP_TOP_4.0.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+FNDLOAD apps/PASSWORD 0 Y UPLOAD $FND_TOP/patch/115/import/afsload.lct MSC_SCA_TOP_4.0.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+FNDLOAD apps/PASSWORD 0 Y UPLOAD $FND_TOP/patch/115/import/afsload.lct XXNBTY_ASCP_IOADMINUSER.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+FNDLOAD apps/PASSWORD 0 Y UPLOAD $FND_TOP/patch/115/import/afsload.lct XXNBTY_INVENTORY_PLANNER.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+FNDLOAD apps/PASSWORD 0 Y UPLOAD $FND_TOP/patch/115/import/afsload.lct XXNBTY_PLANNING_ADMIN.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+FNDLOAD apps/PASSWORD 0 Y UPLOAD $FND_TOP/patch/115/import/afsload.lct MSC_TOP_4.0.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+
+--upload_responsibility
+
+FNDLOAD apps/PASSWORD  O Y UPLOAD $FND_TOP/patch/115/import/afscursp.lct NBTYAPCCSSManager.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+FNDLOAD apps/PASSWORD  O Y UPLOAD $FND_TOP/patch/115/import/afscursp.lct NBTY_APCC_Supply_User.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+FNDLOAD apps/PASSWORD  O Y UPLOAD $FND_TOP/patch/115/import/afscursp.lct NBTY_ASCP_IOAdminUser.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+FNDLOAD apps/PASSWORD  O Y UPLOAD $FND_TOP/patch/115/import/afscursp.lct NBTY_Inventory_Planner.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+FNDLOAD apps/PASSWORD  O Y UPLOAD $FND_TOP/patch/115/import/afscursp.lct NBTY_Planning_Admin.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+FNDLOAD apps/PASSWORD  O Y UPLOAD $FND_TOP/patch/115/import/afscursp.lct NBTY_Supply_Planner.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+FNDLOAD apps/PASSWORD  O Y UPLOAD $FND_TOP/patch/115/import/afscursp.lct NBTY_APCC_Supply_Admin_User.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+
+--UPload concurrent program
+
+FNDLOAD apps/PASSWORD  0 Y UPLOAD $FND_TOP/patch/115/import/afcpprog.lct XXNBTY_EXT05_CP_d.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+
+
+--Upload request set
+
+FNDLOAD apps/PASSWORD 0 Y UPLOAD $FND_TOP/patch/115/import/afcprset.lct XXNBTY_Planning_MPS_MRP_RS.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+FNDLOAD apps/PASSWORD 0 Y UPLOAD $FND_TOP/patch/115/import/afcprset.lct XXNBTYMONTHMPS_RS.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+FNDLOAD apps/PASSWORD 0 Y UPLOAD $FND_TOP/patch/115/import/afcprset.lct XXNBTY_MONTHLY_PLAN_RS.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+
+--Upload request set links
+
+FNDLOAD apps/PASSWORD 0 Y UPLOAD $FND_TOP/patch/115/import/afcprset.lct XXNBTY_LF19_RSL.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+FNDLOAD apps/PASSWORD 0 Y UPLOAD $FND_TOP/patch/115/import/afcprset.lct XXNBTY_Planning_MPS_MRP_RL.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+FNDLOAD apps/PASSWORD 0 Y UPLOAD $FND_TOP/patch/115/import/afcprset.lct XXNBTYMONTHMPS_RL.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+FNDLOAD apps/PASSWORD 0 Y UPLOAD $FND_TOP/patch/115/import/afcprset.lct XXNBTY_MONTHLY_PLAN_RL.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+
+--Upload request group
+
+
+FNDLOAD apps/PASSWORD  0 Y UPLOAD $FND_TOP/patch/115/import/afcpreqg.lct XXNBTY_EXT05_CP_RG.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+
+FNDLOAD apps/PASSWORD  0 Y UPLOAD $FND_TOP/patch/115/import/afcpreqg.lct XXNBTY_Planning_MPS_MRP_RG.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+
+FNDLOAD apps/PASSWORD  0 Y UPLOAD $FND_TOP/patch/115/import/afcpreqg.lct XXNBTYMONTHMPS_RG.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+
+FNDLOAD apps/PASSWORD  0 Y UPLOAD $FND_TOP/patch/115/import/afcpreqg.lct XXNBTY_MONTHLY_PLAN_RG.ldt CUSTOM_MODE=FORCE >> /home/nbtydata/VCP_RICEFW/VCP_deployment_additional.log
+
+
+
+
+
+
+2. Command to Upload Grant. 
+
+
+Move the xxnbty_vcp_grant_command_all_tables.sql to /u01/oracle/apps/apps_st/appl/xxnbty/12.0.0/sql and execute the command.
+NOTE: Please use the NBTY user to execute the grant. 
+
+sqlplus -s xxnbty/PASSWORD
+
+@/u01/oracle/apps/apps_st/appl/xxnbty/12.0.0/sql/xxnbty_vcp_grant_command_all_tables.sql
+
+
+
+
+
+3. Command to Upload packages.
+
+
+
+Move the XXNBTY_MSC_EXT02_CUSTOMER_PKG.pkb and XXNBTY_MSC_EXT01_ITEM_DESC_PKG.pkb to /u01/oracle/apps/apps_st/appl/xxnbty/12.0.0/admin/sql and execute the command.
+NOTE: You may use apps user and apps password. 
+
+
+
+sqlplus -s USERNAME/PASSWORD
+
+@/u01/oracle/apps/apps_st/appl/xxnbty/12.0.0/admin/sql/XXNBTY_MSC_EXT02_CUSTOMER_PKG.pkb
+
+
+@/u01/oracle/apps/apps_st/appl/xxnbty/12.0.0/admin/sql/XXNBTY_MSC_EXT01_ITEM_DESC_PKG.pkb	
+
+
+
+
+
+3. Command to XML files.
+
+
+Move the DATA_TEMPLATE_XXNBTY_XXNBTY_MSC_SFTY_STKS_GEN_RPT.xml and TEMPLATE_SOURCE_XXNBTY_XXNBTY_MSC_SFTY_STKS_GEN_RPT_en_US.rtf to /u01/oracle/apps/apps_st/appl/xxnbty/12.0.0/java and execute the command.
+NOTE: Please change the proper details below (PASSWORD of the DB, username of DB, HOST name of the DB, Port number of the DB, ervice Name of the DB).
+
+UPLOAD XML:
+
+java oracle.apps.xdo.oa.util.XDOLoader UPLOAD -DB_USERNAME <username of the DB> -DB_PASSWORD <PASSWORD of the DB> -JDBC_CONNECTION '(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=<HOST name of the DB>)(PORT=<Port number of the DB>))(CONNECT_DATA=(SERVICE_NAME=<Service Name of the DB>)))' -LOB_TYPE DATA_TEMPLATE -LOB_CODE XXNBTY_MSC_SFTY_STKS_GEN_RPT -XDO_FILE_TYPE XML -FILE_NAME /u01/oracle/apps/apps_st/appl/xxnbty/12.0.0/java/DATA_TEMPLATE_XXNBTY_XXNBTY_MSC_SFTY_STKS_GEN_RPT.xml -APPS_SHORT_NAME XXNBTY -NLS_LANG en -TERRITORY US -LOG_FILE /u01/oracle/apps/apps_st/appl/xxnbty/12.0.0/java/DATA_TEMPLATE_XXNBTY_MSC_SFTYSTKS_XML.log
+
+
+
+UPLOAD RTF:
+java oracle.apps.xdo.oa.util.XDOLoader UPLOAD -DB_USERNAME <username of the DB> -DB_PASSWORD <password of the DB> -JDBC_CONNECTION '(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=<HOST name of the DB>)(PORT=<Port number of the DB>))(CONNECT_DATA=(SERVICE_NAME=<Service name of the DB>)))' -LOB_TYPE TEMPLATE -LOB_CODE XXNBTY_MSC_SFTY_STKS_GEN_RPT -XDO_FILE_TYPE RTF -FILE_NAME /u01/oracle/apps/apps_st/appl/xxnbty/12.0.0/java/TEMPLATE_SOURCE_XXNBTY_XXNBTY_MSC_SFTY_STKS_GEN_RPT_en_US.rtf -APPS_SHORT_NAME XXNBTY -LANGUAGE en -TERRITORY US -NLS_LANG en -LOG_FILE /u01/oracle/apps/apps_st/appl/xxnbty/12.0.0/java/XXNBTY_MSC_SFTY_STKS_GEN_RPT.log
+
+
+
+
