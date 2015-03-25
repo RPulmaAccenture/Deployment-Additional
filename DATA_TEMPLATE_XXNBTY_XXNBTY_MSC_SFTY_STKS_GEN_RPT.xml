@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- $Header: DATA_TEMPLATE_XXNBTYSFTYSTKS.xml 115.3 2015/03/04 12:10:12 xdouser noship $ -->
+<!-- dbdrv: none -->
+
+<dataTemplate name="XXNBTYSFTYSTKS" version="1.0">
+ <properties>
+  <property name="xml_tag_case" value="upper" />
+ </properties>
+ <parameters>
+ </parameters>
+ <dataQuery>
+  <sqlStatement name="Q_SAFETY_STOCK">
+   <![CDATA[SELECT msi.item_name item_name, 
+                   msi.description description, 
+                   mtp.organization_code org, 
+                   TO_CHAR(mss.period_start_date, 'DD-MON-YYYY') effective_date, 
+                   msi.uom_code uom, 
+                   mss.user_defined_safety_stocks user_def_qty, 
+                   mss.user_defined_dos user_def_dos
+              from MSC_SAFETY_STOCKS mss, 
+                   MSC_SYSTEM_ITEMS msi, 
+                   MSC_TRADING_PARTNERS mtp
+             where mss.inventory_item_id = msi.inventory_item_id
+               and mss.organization_id = msi.organization_id
+               and mss.organization_id = mtp.sr_tp_id
+               and mss.plan_id = -1
+               and mss.plan_id = msi.plan_id
+               and mtp.organization_code is not null
+   ]]>
+  </sqlStatement>
+ </dataQuery>
+ <dataStructure>
+  <group name="G_SAFETY_STOCK" dataType="varchar2" source="Q_SAFETY_STOCK">
+   <element name="ITEM_NAME" dataType="varchar2" value="ITEM_NAME" />
+   <element name="DESCRIPTION" dataType="varchar2" value="DESCRIPTION" />
+   <element name="ORG" dataType="varchar2" value="ORG" />
+   <element name="EFFECTIVE_DATE" dataType="date" value="EFFECTIVE_DATE" />
+   <element name="UOM" dataType="varchar2" value="UOM" />
+   <element name="USER_DEF_QTY" dataType="varchar2" value="USER_DEF_QTY" />
+   <element name="USER_DEF_DOS" dataType="varchar2" value="USER_DEF_DOS" />
+  </group>
+ </dataStructure>
+</dataTemplate>
